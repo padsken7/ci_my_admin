@@ -307,7 +307,7 @@ class Panel extends CI_Controller {
 				if($this->form_validation->run()) {
 					$this->db->where('id', $id);
 					$this->db->update($table_name, $this->data_to_insert);
-					$this->data['success'] = 'Материал успешно обновлен!';
+					$this->data['success'] = 'Запись успешно обновлена!';
 					$this->load->view('admin/admin_edit_view', $this->data);
 				} else {
 					$this->data['error'] = '<b>Ошибка при заполнении формы:</b> ';
