@@ -1,0 +1,7 @@
+table td {
+	border: 1px solid #dddddd;
+}
+table th {
+	border: 1px solid #dddddd;
+	border-bottom: 2px solid #dddddd;
+}
