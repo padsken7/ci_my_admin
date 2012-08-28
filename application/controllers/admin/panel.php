@@ -106,7 +106,7 @@ class Panel extends CI_Controller {
 					
 					if(!$field->primary_key && $this->input->post($field->name)) {
 					
-						$this->data_to_insert[$field->name] = $this->input->post($field->name, true);
+						$this->data_to_insert[$field->name] = html_purify($this->input->post($field->name, true));
 						
 					}
 				}
@@ -164,7 +164,7 @@ class Panel extends CI_Controller {
 					
 					if(!$field->primary_key && $this->input->post($field->name)) {
 					
-						$this->data_to_insert[$field->name] = $this->input->post($field->name, true);
+						$this->data_to_insert[$field->name] = html_purify($this->input->post($field->name, true));
 						
 					}
 				}
@@ -173,7 +173,7 @@ class Panel extends CI_Controller {
 				
 				$this->data['table_name'] = $table_name;
 				$this->data['fields'] = $result;
-				$this->load->view('admin/admin_edit_view', $this->data);		
+				$this->load->view('admin/admin_edit_view', $this->data);
 			}
 			
 		} else {
@@ -220,7 +220,7 @@ class Panel extends CI_Controller {
 					
 					if(!$field->primary_key && $this->input->post($field->name)) {
 					
-						$this->data_to_insert[$field->name] = $this->input->post($field->name, true);
+						$this->data_to_insert[$field->name] = html_purify($this->input->post($field->name, true));
 						
 					}
 				}
@@ -294,7 +294,7 @@ class Panel extends CI_Controller {
 					
 					if(!$field->primary_key && $this->input->post($field->name)) {
 					
-						$this->data_to_insert[$field->name] = $this->input->post($field->name, true);
+						$this->data_to_insert[$field->name] = html_purify($this->input->post($field->name, true));
 						
 					}
 				}
