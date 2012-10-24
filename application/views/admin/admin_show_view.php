@@ -30,8 +30,8 @@
 					<?php foreach($item as $key => $val): ?>
 						<td><?php echo cut_string(strip_tags($val), 50); ?></td>
 					<?php endforeach; ?>
-					<td style="text-align:center;"><a href="/admin/panel/edit/<?=$table_name_show;?>/<?=$item->id;?>"><i class="icon-pencil"></i></a></td>
-					<td style="text-align:center;"><a href="/admin/panel/delete/<?=$table_name_show;?>/<?=$item->id;?>" onclick="return confirm('Вы действительно хотите удалить запись?')"><i class="icon-trash"></i></a></td>
+					<td style="text-align:center;width:20px;"><a href="/admin/panel/edit/<?=$table_name_show;?>/<?=$item->id;?>"><i class="icon-pencil"></i></a></td>
+					<td style="text-align:center;width:20px;"><a href="/admin/panel/delete/<?=$table_name_show;?>/<?=$item->id;?>" onclick="return confirm('Вы действительно хотите удалить запись?')"><i class="icon-trash"></i></a></td>
 				</tr>
 				<?php endforeach; ?>
 				
