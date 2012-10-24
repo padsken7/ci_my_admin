@@ -11,9 +11,11 @@ class Admin {
 
     public function create_add_links($table_name='')
     {
+		$CI =& get_instance();
 		$result = '<ul class="nav nav-tabs nav-stacked">';
 		foreach ($this->tables as $table => $val) {
-			$result .= ($table == $table_name) ? '<li class="active">' : '<li>';
+			$mode = $CI->uri->segment(3);
+			$result .= ($table == $table_name && $mode=='add') ? '<li class="active">' : '<li>';
 			$result .= '<a href="/admin/panel/add/' . $table .'">' . $val['add'] . '</a></li>' . "\n";
 		}
 		$result = $result . '</ul>';
