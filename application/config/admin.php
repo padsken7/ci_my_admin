@@ -96,7 +96,7 @@ encode_php_tags	    No	            Converts PHP tags to entities.
 		$validation['sub_cats']['title'] = 'required|min_length[3]|xss_clean|htmlspecialchars';
 		$validation['sub_cats']['name'] = 'required|min_length[3]|xss_clean|htmlspecialchars';
 		
-		// связи между базами данных
+		// связи между таблицами
 		$relations['products']['has_one'] = 'sub_cat';
 		
 		// nicedit
